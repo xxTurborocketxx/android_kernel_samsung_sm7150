@@ -1397,10 +1397,10 @@ static struct ctl_table kern_table[] = {
 		.procname	= "unprivileged_bpf_disabled",
 		.data		= &sysctl_unprivileged_bpf_disabled,
 		.maxlen		= sizeof(sysctl_unprivileged_bpf_disabled),
-		.mode		= 0644,
+		.mode		= 0444,
 		.proc_handler	= bpf_unpriv_handler,
 		.extra1		= &zero,
-		.extra2		= &two,
+		.extra2		= &zero,
 	},
 #endif
 #if defined(CONFIG_TREE_RCU) || defined(CONFIG_PREEMPT_RCU)
